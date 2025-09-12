@@ -11,10 +11,7 @@ public sealed class ConsoleAlert : IAlert
 {
 	public void Info(string message) => Console.WriteLine(message);
 
-	public void Critical(string message)
-	{
-		Console.WriteLine(message);
-	}
+	public void Critical(string message) => Console.WriteLine(message);
 
 	public void Blink(int times, int delayMs)
 	{

@@ -2,7 +2,6 @@
 
 public enum VitalIssue
 {
-	None = 0,
 	TemperatureLow,
 	TemperatureHigh,
 	PulseLow,
@@ -35,7 +34,7 @@ public static class Vitals
 	public static bool IsOk(float temperatureF, int pulseRate, int spo2) =>
 		Evaluate(temperatureF, pulseRate, spo2).Count == 0;
 
-	// Each helper has CCN ≈ 1 thanks to a switch expression.
+	// Each helper has CCN ≈ 1.
 	private static VitalIssue? CheckTemperature(float t) => t switch
 	{
 		< MinTempF => VitalIssue.TemperatureLow,
